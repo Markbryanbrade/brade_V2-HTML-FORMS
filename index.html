@@ -1,52 +1,301 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="/style.css">
-    <body>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
 
-        <div class="logo">
-            <img src="logo.jpg" alt ="">
-        </div>
-         
-        <div class="about">
-            <h2>Mark's Cusine</h1>
-                <h1 class="h1">Taste the old Recipe</h1>  
-                <ul><a href="/index.html"></a></ul>   
-                <p>Located at 123c street nagasaski shipuden ,japan</p>     
-        </div>
+    <style>
+      *{
+  padding: 0%;
+  border-image: 12px;
+}
 
-        <div id="dropdown">
-                <button class="dropdown-toggle">
-                <span>Menu</span>
-                <i class="fa-solid fa-ceret-down"></i>
-         </button>
+h2  {
+  color:gray;
+  text-align: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: bold;
+}
 
-         <ul class ="menu">
-                    <li class="menu-item"><a a href="#">Italian</a></li> 
-                    <li class="menu-item"><a a href="#">Chinese</a></li> 
-                    <li class="menu-item dropdown">
+.search-bar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
 
-                            <a href ="#" class ="submenu-toggle">
-                            <span>Healthy Options</span>
-                            <i class="fa-solid fa-caret-right"></i>
-            </a>
-            <ul class="submenu">
-                   <li class="submenu-item"><a href="#">Vegetarian</a></li>
+.search-input {
+  width: 80%; 
+  padding: 10px;
+  font-size: 16px;
+  
+  margin-bottom: 50px;
+}
+
+.search-button {
+  padding: 10px 10px;
+  font-size: 11px;
+  background-color:gray; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+body {
+    
+    color:aliceblue;
+    border-bottom: 110px;
+    height: 100px;
+  }
+
+  .grid-container {
+    gap :50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-image: 90px;
+    padding: 10px;
+    border-top: 50px;
+    border-radius: 50px;
+    border-style: hidden;
+ 
+  }
+  .grid-item {
+    border: 2px solid green;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left:50px;
+    border-bottom: 100px;   
+    image-rendering: inherit;
+    
+    
+  }
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px  35px;
+  
+  padding-top: 10px;
+}
+
+#nav_KAsabong {
+  margin-right:auto;
+  letter-spacing: 20px;
+  font-size: 100px;
+  text-align: left;
+ 
+} 
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 12px 10px;
+
+}
+
+header a{
+  text-decoration: solid;
+  transition: all 0.6s ease 0;
+  color:black;
+  border-style:1px solid;
+  font-family:'Courier New', Courier, monospace; 
+  color:whitesmoke;
+  font-size: larger;
+}
+
+header a:hover{
+  color:grey;
+  font-size: larger;
+}
+    
+button{
+  border-radius: 40px;
+  text-size-adjust: 5%;
+  background-color: gray;
+  font-family: 'Courier New', Courier, monospace;
+  color:whitesmoke;
+
+  font-size:medium;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: solid black;
+  padding: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+  font-family:'Courier New', Courier, monospace; 
+  color:whitesmoke;
+  font-size: larger;
+  
+
+}
+
+td {
+  padding: 30px; 
+  border: 1px solid #ddd; 
+  text-align: center;
+  font-size: bold;
+}
+ 
+
+    </style>
+
+    <body style="background-image: url(https://th.bing.com/th/id/OIP.R7ku_8H4P_Jgh1wUGQC5gQAAAA?rs=1&pid=ImgDetMain);" >
+
+
+     
+
+        <header style="background-image: url(https://th.bing.com/th/id/OIP.R7ku_8H4P_Jgh1wUGQC5gQAAAA?rs=1&pid=ImgDetMain);">
+          <h1 id="KAsabong"><a href="#">KAsabong</a></h1>
+          <nav>
+            <ul>
+              <li><a href="#">HOME </a></li>
+              <li><a href="#">SERVICES</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">ABOUT US</a></li>
+             
             </ul>
-            <li>
-                   <li class="menu-item"><a href="#">Mexican</a></li>
-                   <li class="menu-item dropdown">
-          <a href="#" class="submenu-toggle">
-                   <span>Specials</span>
-                   <i class="fa-solid fa-caret-right"></i>
-          </a>
-         <ul  class="submenu"></ul>              
-                   </ul>
-                   </li>
-        </lu>
-        </div>
+          </nav>
+        </header>
+       
+       <h2>
+              Trust and Tested gamefowl
+       </h2>
+
+       <form action="/search" method="get" class="search-bar">
+        <input
+            type="text"
+            name="query"
+            class="search-input"
+            placeholder="Search..."
+        >
+        <button type="submit" class="search-button">Search</button>
+       </form>
 
 
-        <script   src="script.js"></script>></script>
+
+       <div style="background-image:url(https://urbanmatter.com/wp-content/uploads/2023/02/SabongFEat.jpeg); padding: 100px;  width: fit-content;" >
+        <div class="grid-container">
+          <div class="grid-item"  style="background-color:black;   margin-top:25px;  transition: all 0.6s ease 0;"> 
+            <img src="https://esp.vitofarma.us/wp-content/uploads/2022/12/Kelso.jpg" style =' width: 200px; height:200px;   '>
+            <h3>KELSO </h3>
+            <p> $ 900.00  USD</p>
+            <button type="button">BUY NOW!</button>
+          </div>
+          <div class="grid-item" style="background-color:black; margin-top:25px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIvvCuaOOQ_ks0Wty8Y53CoEnPvwnA8YCZRPFrTkC2Lg&s"style ='width: 200px; height:200px ; '>
+            <h3>SUMATRA</h3>
+            <p> $ 800.00  USD</p>
+            <button type="button">BUY NOW!</button>
+          </div>
+          <div class="grid-item" style="background-color:black; margin-top:25px;" >
+             <img src="https://i.pinimg.com/236x/1b/ff/6c/1bff6cd356933c402bb73b70fbce766a.jpg"style ='width: 200px; height:200px ;'>
+            <h3>CLARET</h3>
+            <p> $ 1,600.00  USD</p>
+            <button type="button">BUY NOW!</button>
+
+          </div>  
+          <div class="grid-item"style="background-color:black">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcI5WlHe97DCGn2lYLnQcxih2HDgSNUOETk7X8YrdBMg&s"style ='width: 200px; height:200px ;'>
+            <h3>RADIO</h3>
+            <p> $ 11,000.00  USD</p>
+            <button type="button">BUY NOW!</button>
+          </div>
+          <div class="grid-item"style="background-color:black">
+            <img src='https://i.pinimg.com/736x/f1/8b/25/f18b255a946fd4f7bda5dfac6060820d.jpg' style ='width: 200px; height:200px ;'>
+            <h3>SHAMO</h3>
+            <p> $ 1,200.00  USD</p>
+            <button type="button">BUY NOW!</button>
+          </div>
+          <div class="grid-item"style="background-color:black">
+            <img src="https://i.pinimg.com/474x/38/09/db/3809db08e45b726433b882cdd8e3b8ff.jpg" style ='width: 200px; height:200px ;'>
+            <h3>LACY ROUNDHEAD</h3>
+           <p> $ 9,100.00  USD</p>
+           <button type="button">BUY NOW!</button>
+          </div>  
+          <div class="grid-item"style="background-color:black">
+            <img src='https://i.pinimg.com/originals/1a/ad/4b/1aad4b78e37690d352f878f77d7a8015.jpg' style ='width: 200px; height:200px ;'>
+            <h3>SPANISH GAMEFOWL</h3>
+           <p> $ 6,100.00  USD</p>
+           <button type="button">BUY NOW!</button>
+          
+          </div>
+          <div class="grid-item"style="background-color:black">
+            <img src='https://i.redd.it/20293nercgq01.jpg' style ='width: 200px; height:200px ;'>
+            <h3>AYAM CEMANI</h3>
+            <p>$ 1,300.00  USD</p>
+            <button type="button">BUY NOW!</button>
+          </div>
+          <div class="grid-item"style="background-color:black">
+            <img src='https://i.redd.it/02mnrlyju12a1.jpg' style ='width: 200px; height:200px ;'>
+            <h3>BROWN RED GAMEFOWL</h3>
+            <p>$ 9,100.00  USD</p>
+            <button type="button">BUY NOW!</button>
+          </div>  
+        </div>  
+
+        <div class="content">
+          
+          <h1>Welcome to Our Website</h1>
+          <p>Here's some content at the top of the page.</p>
+       </div>
+
+       <div class="footer" style ="font-weight:bold; background-image: url(https://th.bing.com/th/id/OIP.mmpQhX3K84Hb_kiT0SqVMgHaLH?rs=1&pid=ImgDetMain)";>
+        <table>
+            <tr>
+                <td>Contact Us</td>
+                <td>About Us</td>
+                <td>Privacy Policy</td>
+                <td>Terms of Service</td>
+            </tr>
+            <tr style ="font-weight:bold";>
+                <td>marksabong@gmail.com</td>
+                <td>KAsabong INC </td>
+                <td><a href="/privacy">View Policy</a></td>
+                <td><a href="/terms">View Terms</a></td>
+            </tr>
+        </table>
+    </div>
+  
+       <div class="footer">
+          <img src="path/to/your/logo.png" alt="Company Logo">
+          <p>© 2024 Your Company Name. All rights reserved.</p>
+
+       </div>
         
+          
+        
+        
+    
+       
+            
+                 
+         
+
+       </div>
     </body>
 </html>
